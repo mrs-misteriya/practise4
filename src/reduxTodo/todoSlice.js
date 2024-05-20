@@ -9,7 +9,7 @@ const todoSlice = createSlice({
      },
     reducers: {
         addTodos: (state, action) => {
-        state.items=[...state.items, action.payload]
+        state.items.push(action.payload)
         },
         deleteTodos: (state, action) => {
         state.items = state.items.filter(task => task.id !== action.payload);

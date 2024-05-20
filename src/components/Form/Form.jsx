@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { addTodos } from 'reduxTodo/todoSlice';
 
 export const Form = () => {
-  const dispacth = useDispatch();
+  const dispatch = useDispatch();
 
   const [value, setValue] = useState('');
 
@@ -22,7 +22,7 @@ export const Form = () => {
       text: value,
     };
 
-    dispacth(addTodos(data));
+    dispatch(addTodos(data));
     setValue('');
   };
 
